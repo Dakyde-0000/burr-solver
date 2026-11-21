@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "burr-solver"
+version = "0.1.0"
+description = "Identification et résolution de casse-têtes burr à 6 pièces (2x2x8)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "David Agnimel" }]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+viz = ["matplotlib>=3.5", "pillow>=9"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+burr-solver = "burr_solver.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+build/
+dist/
+outputs/
+.DS_Store
+# photos brutes (peuvent contenir des métadonnées GPS)
+photos/
+*.HEIC
+*.heic
